@@ -1,0 +1,130 @@
+@font-face{
+     font-family: "invinc";
+     src: url("/ShadowofXizor.woff2") format("woff2");
+}
+
+html,body,#app
+{
+     height:100%;
+}
+#app>*{
+     margin: auto;
+}
+
+div{
+     background-color: inherit;
+}
+
+body{
+     overflow: hidden;
+     margin: 0;
+     background-color: #b51616;
+}
+
+#playingField.standard{
+     align-content: center;
+     aspect-ratio: 1 / 1;
+     width:100%;
+     max-width: 500px;
+     display: grid;
+     grid-template-columns: 100%;
+
+
+}
+
+#playingField.rendering{
+     align-content: center;
+     aspect-ratio: auto;
+     max-width: 1036px;
+     width:1036px;
+     height:1036px;
+     margin:0px;
+
+
+}
+
+#ttt2{
+     /*transform-style: preserve-3d;
+     transform: perspective(5000px);*/
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     /*padding: 50px;*/
+}
+
+#ttt{
+
+     top:100px;
+     left:100px;
+     /*transform-style: preserve-3d;
+     transform: perspective(1500px) rotateX(35deg);*/
+
+}
+
+img{
+     max-width: 100%;
+     height: auto;
+     visibility: visible;
+}
+
+#displayScreen{
+     top:0px;
+     height: 100%;
+     width:100%;
+     position: absolute;
+     background-color: rgba(0, 0, 0, 0.5);
+     flex-direction: column;
+     button{
+          align-self: flex-end;
+          width: fit-content;
+     }
+}
+
+.close{
+     display: none;
+}
+
+.open{
+     display: flex;
+}
+
+/*#ttt div,svg{
+     transform: rotateY(0deg) translateZ(50px);
+}*/
+
+
+
+#frame{
+     align-self: center;
+     max-width: 50%;
+     aspect-ratio: 320 / 259;
+}
+
+p{
+     font-family: invinc;
+     color: lightYellow;
+     font-size: 30px;
+     text-align: center;
+}
+
+svg{
+     overflow: visible;
+     transform: matrix3d(1, 0, 0, 0, 0, 1, -2, -0.000382384, 0, 0, 3.8, -0.000546101, 0, 0, 0, 1);
+     transform-style: preserve-3d;
+     text{
+          fill: #fcfcf1;
+     }
+
+}
+
+
+
+span{
+     display:block;
+     text-align: center;
+     background-color: blue;
+}
+
+canvas{
+     display: none;
+}
