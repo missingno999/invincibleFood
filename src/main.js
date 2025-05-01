@@ -1,9 +1,5 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 import * as htmlToImage from 'html-to-image';
-import h from '/fdaone.png'
 import { toPng, toCanvas} from 'html-to-image';
 //use an event listener to get data from input, and update image src property
 
