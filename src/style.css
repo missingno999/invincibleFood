@@ -7,6 +7,14 @@ html,body,#app
 {
      height:100%;
 }
+
+body{
+     overflow: hidden;
+     margin: 0;
+     background-color: #b51616;
+}
+
+/*all elements children of app are centered using this rule*/
 #app>*{
      margin: auto;
 }
@@ -15,11 +23,6 @@ div{
      background-color: inherit;
 }
 
-body{
-     overflow: hidden;
-     margin: 0;
-     background-color: #b51616;
-}
 
 #playingField.standard{
      align-content: center;
@@ -28,8 +31,6 @@ body{
      max-width: 500px;
      display: grid;
      grid-template-columns: 100%;
-
-
 }
 
 #playingField.rendering{
@@ -39,26 +40,17 @@ body{
      width:1036px;
      height:1036px;
      margin:0px;
-
-
 }
 
-#ttt2{
-     /*transform-style: preserve-3d;
-     transform: perspective(5000px);*/
+#renderableDiv1{
      display: flex;
      justify-content: center;
      flex-direction: column;
-     /*padding: 50px;*/
 }
 
-#ttt{
-
+#renderableDiv2{
      top:100px;
      left:100px;
-     /*transform-style: preserve-3d;
-     transform: perspective(1500px) rotateX(35deg);*/
-
 }
 
 img{
@@ -88,11 +80,6 @@ img{
      display: flex;
 }
 
-/*#ttt div,svg{
-     transform: rotateY(0deg) translateZ(50px);
-}*/
-
-
 
 #frame{
      align-self: center;
@@ -116,8 +103,6 @@ svg{
      }
 
 }
-
-
 
 span{
      display:block;
