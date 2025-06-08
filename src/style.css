@@ -3,6 +3,11 @@
      src: url("/ShadowofXizor.woff2") format("woff2");
 }
 
+@font-face{
+     font-family: "subtext";
+     src: url("/Anton-Regular.woff2") format("woff2");
+}
+
 html,body,#app
 {
      height:100%;
@@ -25,6 +30,7 @@ div{
 
 
 #playingField.standard{
+     font-family: subtext;
      align-content: center;
      aspect-ratio: 1 / 1;
      width:100%;
@@ -34,6 +40,7 @@ div{
 }
 
 #playingField.rendering{
+     font-family: subtext;
      align-content: center;
      aspect-ratio: auto;
      max-width: 1036px;
@@ -55,8 +62,9 @@ div{
 
 img{
      max-width: 100%;
-     height: auto;
+     max-height: 100%;
      visibility: visible;
+
 }
 
 #displayScreen{
@@ -82,9 +90,14 @@ img{
 
 
 #frame{
+     display: flex;
+     flex-direction: column;
+     background-color: none;
      align-self: center;
      max-width: 50%;
      aspect-ratio: 320 / 259;
+     align-items: center;
+     background-color: unset;
 }
 
 p{

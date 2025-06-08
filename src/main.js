@@ -16,7 +16,7 @@ document.querySelector('#app').innerHTML = `
           <label for="fontColor">Font Color</label>
           <input id="fontColor" type="color" value="#fcfcf1">
      </div>
-     <canvas id="imageText" width="880" height="1036"></canvas>
+     <canvas id="imageText" width="1036" height="1036"></canvas>
      <div id="playingField" class="standard">
           <div id="renderableDiv1">
                <div id="renderableDiv2">
@@ -27,13 +27,13 @@ document.querySelector('#app').innerHTML = `
                          <feDisplacementMap in="SourceGraphic" in2="goods" xChannelSelector="B" yChannelSelector="R" scale="50" y="0"  height="100%" preserveAspectRatio="none"/>
                     </filter>
                     <!--<rect x='0' y='0' width="700px" height="700px" filter="url(#bend)"/>-->
-                         <image x='67px' y='0' id="prerender"></image>
+                         <image x='-10px' y='0px' id="prerender"></image>
                          <text id="editText" x='67px' y='570px' font-family='invinc' textLength="880px" text-anchor="start" lengthAdjust="spacingAndGlyphs" filter="url(#bend)">
                          </text>
-                         <text x='410px' y='630px' font-size="20px" font-family="fantasy" style="fill: rgb(252, 252, 241);" class="subtext">
+                         <text x='410px' y='630px' font-size="20px" font-family="subtext" style="fill: rgb(252, 252, 241);" class="subtext">
                               BASED ON THE COMIC BOOK BY
                          </text>
-                         <text x='365px' y='660px' font-size="20px" font-family="fantasy" style="fill: rgb(252, 252, 241);" class="subtext">
+                         <text x='359px' y='660px' font-size="20px" font-family="subtext" style="fill: rgb(252, 252, 241);" class="subtext">
                               Robert Kirkman, Cory Walker & Ryan Ottley
                          </text>
                     </svg>
@@ -77,7 +77,7 @@ function setuppp(){
      element.addEventListener("keyup",
      (e)=>{
           let text=document.getElementById("editText");//Get the SVG text element
-          text.innerHTML=document.querySelector('#userText').value;//Copy the text value from the input over
+          text.innerHTML=document.querySelector('#userText').value.toLowerCase();//Copy the text value from the input over
           //The resize the the size of the text according to the length of the input
           text.style["font-size"]=(document.querySelector('#userText').value.length>6 ? `${(660/document.querySelector('#userText').value.length)*(500/110)}px` : "500px")
      });
@@ -96,7 +96,7 @@ function setuppp(){
           contexty.fillStyle=document.querySelector("#fontColor").value;
           contexty.filter="url(#bend)";
           contexty.font =`${document.querySelector('#userText').value.length>6 ? `${(660/document.querySelector('#userText').value.length)*(500/110)}px` : "500px"} invinc`;
-          contexty.fillText(document.querySelector('#userText').value,440,550);
+          contexty.fillText(document.querySelector('#userText').value.toLowerCase(),518,550);
           document.getElementById("imageText").toBlob((blob)=>{
                document.querySelector('#prerender').setAttribute('href',URL.createObjectURL(blob));
           },'image/png')
